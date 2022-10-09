@@ -1,3 +1,5 @@
+from app.services.open_weather_service import get_city_weather
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -6,5 +8,7 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    city_name = "Guadalajara"
+    city = get_city_weather(city_name)
 
+    print(city)
